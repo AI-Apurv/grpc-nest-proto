@@ -53,3 +53,14 @@ message ValidateResponse {
     repeated string error = 2;
     string userId = 3;
 }
+
+
+//Logout
+
+message LogoutRequest {
+    string userId = 1 ;
+}
+
+message LogoutResponse {
+    int32 status = 1 ; 
+}
