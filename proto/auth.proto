@@ -92,6 +92,7 @@ message UpdateResponse {
 message ChangePasswordRequest {
     string oldPassword = 1;
     string newPassword = 2;
+    int32 userId = 3;
 }
 
 message ChangePasswordResponse {
