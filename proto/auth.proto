@@ -8,6 +8,7 @@ service AuthService {
     rpc Validate(ValidateRequest) returns (ValidateResponse) {}
     rpc logout(LogoutRequest) returns (LogoutResponse) {}
     rpc update(UpdateRequest) returns (UpdateResponse) {}
+    rpc changePassword(ChangePasswordRequest) returns (ChangePasswordResponse) {}
 }
 
 //Register
@@ -82,5 +83,17 @@ message UpdateRequest {
 }
 
 message UpdateResponse {
+    int32 status = 1 ;
+}
+
+
+//change password
+
+message ChangePasswordRequest {
+    string oldPassword = 1;
+    string newPassword = 2;
+}
+
+message ChangePasswordResponse {
     int32 status = 1 ;
 }
