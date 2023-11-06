@@ -7,6 +7,7 @@ service AuthService {
     rpc Login(LoginRequest) returns (LoginResponse) {}
     rpc Validate(ValidateRequest) returns (ValidateResponse) {}
     rpc logout(LogoutRequest) returns (LogoutResponse) {}
+    rpc update(UpdateRequest) returns (UpdateResponse) {}
 }
 
 //Register
@@ -64,4 +65,22 @@ message LogoutRequest {
 
 message LogoutResponse {
     int32 status = 1 ; 
+}
+
+
+//Update
+
+message UpdateRequest {
+   optional string firstName = 1;
+   optional string lastName = 2;
+   optional string userName = 3;
+   optional string email = 4;
+   optional string password = 5;
+   optional string contactNumber = 6;
+   optional string address = 7;
+   int32 userId = 8;
+}
+
+message UpdateResponse {
+    int32 status = 1 ;
 }
