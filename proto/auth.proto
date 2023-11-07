@@ -79,7 +79,7 @@ message UpdateRequest {
     string password = 5;
     string contactNumber = 6;
     string address = 7;
-    int32 userId = 8;
+    string userId = 8;
 }
 
 message UpdateResponse {
@@ -92,7 +92,7 @@ message UpdateResponse {
 message ChangePasswordRequest {
     string oldPassword = 1;
     string newPassword = 2;
-    int32 userId = 3;
+    string userId = 3;
 }
 
 message ChangePasswordResponse {
