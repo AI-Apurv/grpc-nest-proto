@@ -15,6 +15,7 @@ message CreateProductRequest {
     string description = 2;
     int32 stock = 3;
     int32 price = 4;
+    string userId = 5;
 }
 
 message CreateProductResponse {
@@ -28,7 +29,7 @@ message CreateProductResponse {
 
 
 message FindOneData {
-    int32 id = 1;
+    string id = 1;
     string name = 2;
     string description = 3;
     int32 stock = 4;
@@ -36,7 +37,7 @@ message FindOneData {
 }
 
 message FindOneRequest {
-    int32 id = 1;
+    string id = 1;
 }
 
 message FindOneResponse {
