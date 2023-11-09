@@ -6,6 +6,7 @@ service ProductService{
     rpc CreateProduct (CreateProductRequest) returns (CreateProductResponse) {}
     rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
     rpc DecreaseStock(DecreaseStockRequest) returns (DecreaseStockResponse) {}
+    rpc UpdateStock(UpdateStockRequest) returns (UpdateStockResponse) {}
     rpc SearchProduct(SearchProductRequest) returns (SearchProductResponse) {}
 }
 
@@ -75,4 +76,18 @@ message SearchProductRequest {
 
 message SearchProductResponse {
    repeated SearchResponse data =1 ;
+}
+
+
+//update stock 
+
+message UpdateStockRequest{
+    string productId = 1 ;
+    int32 quantity = 2 ;
+}
+
+
+message UpdateStockResponse {
+    int32 status = 1 ;
+    string response = 2;
 }
