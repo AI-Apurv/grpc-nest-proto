@@ -28,6 +28,7 @@ message CreateOrderResponse {
 
 message CancelOrderRequest {
     string orderId = 1 ;
+    string userId = 2;
 }
 
 message CancelOrderResponse {
