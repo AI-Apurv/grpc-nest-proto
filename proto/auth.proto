@@ -9,6 +9,8 @@ service AuthService {
     rpc logout(LogoutRequest) returns (LogoutResponse) {}
     rpc update(UpdateRequest) returns (UpdateResponse) {}
     rpc changePassword(ChangePasswordRequest) returns (ChangePasswordResponse) {}
+    rpc forgetPassword(ForgetPasswordRequest) returns (ForgetPasswordResponse) {}
+    rpc resetPassword(ResetPasswordRequest) returns (ResetPasswordResponse) {}
 }
 
 //Register
@@ -97,4 +99,30 @@ message ChangePasswordRequest {
 
 message ChangePasswordResponse {
     int32 status = 1 ;
+}
+
+
+//forget password
+
+message ForgetPasswordRequest {
+    string email = 1 ;
+}
+
+message ForgetPasswordResponse {
+    int32 status = 1 ;
+    string response = 2 ;
+}
+
+
+//reset password
+
+message ResetPasswordRequest {
+    string otp = 1 ;
+    string email = 2 ;
+    string password = 3 ;
+}
+
+message ResetPasswordResponse {
+    int32 status = 1 ;
+    string response = 2 ;
 }
