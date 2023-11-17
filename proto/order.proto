@@ -15,6 +15,7 @@ message CreateOrderRequest {
     string productId = 1;
     int32 quantity = 2;
     string userId = 3;
+    string email = 4;
 }
 
 message CreateOrderResponse {
