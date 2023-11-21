@@ -9,6 +9,7 @@ service ProductService{
     rpc UpdateStock(UpdateStockRequest) returns (UpdateStockResponse) {}
     rpc SearchProduct(SearchProductRequest) returns (SearchProductResponse) {}
     rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse) {}
+    rpc AddCart(AddCartRequest) returns (AddCartResponse) {}
 }
 
 //CreateProduct
