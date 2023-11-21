@@ -114,3 +114,18 @@ message UpdateProductResponse {
     string response = 2;
     repeated string error = 3 ;
 }
+
+
+//add to cart
+
+message AddCartRequest {
+    string productId = 1;
+    string quantity = 2;
+    string userId = 3; 
+}
+
+message AddCartResponse {
+    int32 status = 1;
+    string response = 2;
+    repeated string error = 3;
+}
