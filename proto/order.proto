@@ -16,6 +16,7 @@ service OrderService {
 
 message CreateOrderRequest {
     string userId = 1;
+    string email = 2;
 }
 
 message CreateOrderResponse {
