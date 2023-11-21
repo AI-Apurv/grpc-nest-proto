@@ -6,6 +6,7 @@ package order;
 service OrderService {
     rpc AddCart(AddCartRequest) returns (AddCartResponse) {}
     rpc updateCart(UpdateCartRequest) returns (UpdateCartResponse) {}
+    rpc GetCartDetails(GetCartItemRequest) returns (GetCartItemResponse) {}
     rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse) {}
     rpc CancelOrder(CancelOrderRequest) returns (CancelOrderResponse) {}
 }
@@ -70,4 +71,24 @@ message UpdateCartResponse {
     int32 status = 1;
     string response = 2;
     repeated string error = 3;
+}
+
+
+//get cart items
+
+message GetCartItemRequest {
+    string userId = 1 ;
+}
+
+message cartDetails {
+    string productId =1 ;
+    int32 quantity = 2;
+    int32 unit_price = 3;
+}
+
+message GetCartItemResponse {
+    int32 status = 1;
+    repeated cartDetails data = 2;
+    int32 cartTotal = 3; 
+
 }
