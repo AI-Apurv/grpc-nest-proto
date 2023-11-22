@@ -9,6 +9,25 @@ service OrderService {
     rpc GetCartDetails(GetCartItemRequest) returns (GetCartItemResponse) {}
     rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse) {}
     rpc CancelOrder(CancelOrderRequest) returns (CancelOrderResponse) {}
+    rpc GetOrderDetails(GetOrderDetailsRequest) returns (GetOrderDetailsResponse) {}
+}
+
+
+//get order details 
+
+message GetOrderDetailsRequest {
+    string userId = 1;
+}
+
+message OrderDetails {
+    string productId =1 ;
+    int32 quantity = 2 ;
+    int32 price = 3;
+    string status = 4 ;
+}
+
+message GetOrderDetailsResponse {
+    repeated OrderDetails data = 1;
 }
 
 
