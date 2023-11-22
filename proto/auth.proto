@@ -12,7 +12,17 @@ service AuthService {
     rpc forgetPassword(ForgetPasswordRequest) returns (ForgetPasswordResponse) {}
     rpc resetPassword(ResetPasswordRequest) returns (ResetPasswordResponse) {}
     rpc AddWalletAmount(AddWalletAmountRequest) returns (AddWalletAmountResponse) {}
+    rpc CheckWallet(CheckWalletRequest) returns (CheckWalletResponse) {}
+}
 
+//Find user 
+
+message CheckWalletRequest{
+    string userId = 1;
+}
+
+message CheckWalletResponse{
+    int32 walletAmount = 1;
 }
 
 //Register
