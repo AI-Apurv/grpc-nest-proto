@@ -13,6 +13,22 @@ service AuthService {
     rpc resetPassword(ResetPasswordRequest) returns (ResetPasswordResponse) {}
     rpc AddWalletAmount(AddWalletAmountRequest) returns (AddWalletAmountResponse) {}
     rpc checkWallet(CheckWalletRequest) returns (CheckWalletResponse) {}
+    rpc MoneyTransaction(TransferMoneyRequest) returns (TransferMoneyResponse) {}
+}
+
+
+// Money Transaction
+
+message TransferMoneyRequest {
+    string userId = 1;
+    string sellerId = 2;
+    int32 amount = 3;
+}
+
+message TransferMoneyResponse {
+    int32 status = 1;
+    string response = 2;
+    string error = 3;
 }
 
 //Find user 
