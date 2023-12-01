@@ -19,6 +19,7 @@ message CreateProductRequest {
     int32 stock = 3;
     int32 price = 4;
     string userId = 5;
+    bytes image = 6;
 }
 
 message CreateProductResponse {
