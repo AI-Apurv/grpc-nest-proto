@@ -40,6 +40,7 @@ message FindOneData {
     int32 stock = 4;
     int32 price = 5;
     string sellerId = 6;
+    string image = 7;
 }
 
 message FindOneRequest {
