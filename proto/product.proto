@@ -17,6 +17,7 @@ service ProductService{
 message UploadFileRequest {
     bytes image = 1;
     string imageType = 2;
+    string name = 3;
 }
 
 message UploadFileResponse {
